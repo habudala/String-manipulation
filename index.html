@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>String Manipulation</title>
+</head>
+<body>
+
+<script>
+	var str = " san francisco ";
+	str = str.trim();
+	firstLetter = str.substring(0,1);
+	otherLetters = str.substring(1);
+	firstLetter = firstLetter.toUpperCase();
+	str = firstLetter + otherLetters;
+	//console.log(firstLetter);
+	//console.log(str);
+	var space = str.search(" ");
+
+	if (space > -1) {
+		 secLetterPos = space +1;
+		 secLetter = str.substring(secLetterPos, secLetterPos + 1);
+		 secLetter = secLetter.toUpperCase();
+		 rest = str.slice(secLetterPos +1);
+		 newSecWord = secLetter + rest;
+		 firstWord = str.slice(0,space);
+		 newStr = firstWord + " " + newSecWord;
+		 console.log(newStr);
+
+
+	}
+
+
+</script>
+</body>
+</html>
